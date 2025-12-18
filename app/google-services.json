@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "903045161912",
+    "firebase_url": "https://khelkhelau-default-rtdb.firebaseio.com",
+    "project_id": "khelkhelau",
+    "storage_bucket": "khelkhelau.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:903045161912:android:842b898ccd1c946c96a54d",
+        "android_client_info": {
+          "package_name": "com.example.c37b"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoIYPkSDzCiH4rE2-fDAWSIthPkS7vNmI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:903045161912:android:c112e2f066c8bd8996a54d",
+        "android_client_info": {
+          "package_name": "com.example.project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoIYPkSDzCiH4rE2-fDAWSIthPkS7vNmI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

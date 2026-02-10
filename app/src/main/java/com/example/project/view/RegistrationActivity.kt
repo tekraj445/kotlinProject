@@ -25,7 +25,7 @@ import androidx.compose.ui.unit.sp
 import com.example.project.R
 import com.example.project.repository.UserRepoImpl
 import com.example.project.viewmodel.UserViewModel
-
+import androidx.compose.ui.platform.testTag
 
 class RegistrationActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -107,7 +107,7 @@ fun RegistrationScreen() {
                         tint = DarkGray
                     )
                 },
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().testTag("nameField"),
                 shape = RoundedCornerShape(28.dp),
                 colors = OutlinedTextFieldDefaults.colors(
                     unfocusedBorderColor = Color.LightGray,
@@ -132,7 +132,7 @@ fun RegistrationScreen() {
                         tint = DarkGray
                     )
                 },
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().testTag("emailField"),
                 shape = RoundedCornerShape(28.dp),
                 colors = OutlinedTextFieldDefaults.colors(
                     unfocusedBorderColor = Color.LightGray,
@@ -170,7 +170,7 @@ fun RegistrationScreen() {
                     }
                 },
                 visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().testTag("passwordField"),
                 shape = RoundedCornerShape(28.dp),
                 colors = OutlinedTextFieldDefaults.colors(
                     unfocusedBorderColor = Color.LightGray,
@@ -191,6 +191,7 @@ fun RegistrationScreen() {
                 Checkbox(
                     checked = agreeToTerms,
                     onCheckedChange = { agreeToTerms = it },
+                    modifier = Modifier.testTag("termsCheckbox"),
                     colors = CheckboxDefaults.colors(checkedColor = PrimaryBlue)
                 )
                 Text(
@@ -222,7 +223,8 @@ fun RegistrationScreen() {
                 },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(56.dp),
+                    .height(56.dp)
+                    .testTag("createAccountButton"),
                 shape = RoundedCornerShape(28.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = PrimaryBlue)
             ) {

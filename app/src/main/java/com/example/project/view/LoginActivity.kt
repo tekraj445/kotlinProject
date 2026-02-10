@@ -30,7 +30,7 @@ import com.example.project.view.DashboardActivity
 import com.example.project.R
 import com.example.project.repository.UserRepoImpl
 import com.example.project.viewmodel.UserViewModel
-
+import androidx.compose.ui.platform.testTag
 
 
 
@@ -110,7 +110,7 @@ fun LoginScreen() {
                         tint = DarkGray
                     )
                 },
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().testTag("emailField"),
                 shape = RoundedCornerShape(28.dp),
                 colors = OutlinedTextFieldDefaults.colors(
                     unfocusedBorderColor = Color.LightGray,
@@ -148,7 +148,7 @@ fun LoginScreen() {
                     }
                 },
                 visualTransformation = if (passwordVisible) VisualTransformation.None else PasswordVisualTransformation(),
-                modifier = Modifier.fillMaxWidth(),
+                modifier = Modifier.fillMaxWidth().testTag("passwordField"),
                 shape = RoundedCornerShape(28.dp),
                 colors = OutlinedTextFieldDefaults.colors(
                     unfocusedBorderColor = Color.LightGray,
@@ -215,7 +215,7 @@ fun LoginScreen() {
                 },
                 modifier = Modifier
                     .fillMaxWidth()
-                    .height(56.dp),
+                    .height(56.dp).testTag("loginButton"),
                 shape = RoundedCornerShape(28.dp),
                 colors = ButtonDefaults.buttonColors(containerColor = PrimaryBlue)
             ) {

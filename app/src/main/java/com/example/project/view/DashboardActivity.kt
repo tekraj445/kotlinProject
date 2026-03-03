@@ -2,6 +2,7 @@ package com.example.project.view
 
 import android.app.Activity
 import android.os.Bundle
+import android.provider.ContactsContract
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
@@ -13,6 +14,7 @@ import androidx.compose.material3.Icon
 import androidx.compose.material3.NavigationBar
 import androidx.compose.material3.NavigationBarItem
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SearchBar
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -45,8 +47,9 @@ fun DashboardBody(){
 
     val listItems = listOf(
         NavItem(label = "Home", R.drawable.baseline_home_24),
-        NavItem(label = "Search", R.drawable.baseline_search_24),
+//        NavItem(label = "Search", R.drawable.baseline_search_24),
         NavItem(label = "Profile", R.drawable.baseline_person_24),
+        NavItem(label = "Add Product", R.drawable.baseline_add_shopping_cart_24),
 
         )
 
@@ -75,7 +78,14 @@ fun DashboardBody(){
     ) {padding->
         Box (
             modifier = Modifier.fillMaxSize().padding(padding)
-        )
+        ){
+            when(selectedIndex){
+                0 -> HomeScreen()
+                2 -> AddProduct()
+                else -> HomeScreen()
+
+            }
+        }
         }
     }
 
